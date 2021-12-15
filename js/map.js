@@ -19,40 +19,75 @@ info.onAdd = function (map) {
         return this._div;
 };
 
-info.update = function (props) {
-        this._div.innerHTML = '<h4>Fraction of quotes from male</h4>' +  (props ?
-                '<b>' + props.name + ': ' + props.male_freq + '%' : 'Hover over a state');
+info.update = function (name, stats) {
+  if (!name) {
+    this._div.innerHTML = 'Hover over a state to display data';
+    return;
+  }
+  if (!stats) {
+    this._div.innerHTML = `
+      <div class="country-stats">
+        <h3><b>${name}</b></h3>
+
+        <p>Insufficient or no data about the country</p>
+      </div>
+    `;
+  }
+  this._div.innerHTML = `
+    <div class="country-stats">
+      <h3><b>${name}</b></h3>
+      <table>
+        <tr>
+          <td>Fraction of quotes from men:</td>
+          <td><span>${stats.male_frac}%</span></td>
+        </tr>
+        <tr>
+          <td>Total quotes:</td>
+          <td><span>${stats.total_quotes}</span></td>
+        </tr>
+        <tr>
+          <td>Total citations:</td>
+          <td><span>${stats.total_citations}</span></td>
+        </tr>
+        <tr>
+          <td>Average citations for women:</td>
+          <td><span>${stats.avg_citations_female}</span></td>
+        </tr>
+        <tr>
+          <td>Average citations for men:</td>
+          <td><span>${stats.avg_citations_male}</span></td>
+        </tr>
+        <tr>
+          <td>Most popular topic:</td>
+        </tr>
+        <tr>
+          <td><span>${stats.most_popular_topic}</span></td>
+        </tr>
+      </table
+    <div>
+`;
 };
 
 info.addTo(map);
-
-function getCountryMaleFreq(country) {
-  var PRECISION = 4
-
-  var d = quotesFractions[country];
-  if (d == undefined) {
-    d = 0;
-  }
-  var dec = 10 ** PRECISION;
-  return Math.round(d * dec) / (dec/100);
-}
 
 
 // get color depending on fraction of males
 // TODO: change colors
 function _getColor(d) {
-  return d > 90 ? '#800026' :
-          d > 80  ? '#BD0026' :
-          d > 70  ? '#E31A1C' :
-          d > 60  ? '#FC4E2A' :
-          d > 50   ? '#FD8D3C' :
-          d > 40   ? '#FEB24C' :
-          d > 30   ? '#FED976' :
-          d > 1  ? '#FFEDA0' :
+  return d > 99 ? '#800026' :
+          d > 90  ? '#BD0026' :
+          d > 80  ? '#E31A1C' :
+          d > 70  ? '#FC4E2A' :
+          d > 60   ? '#FD8D3C' :
+          d > 50   ? '#FEB24C' :
+          d > 40   ? '#FED976' :
+          d >= 0  ? '#FFEDA0' :
                       '#FFFFFF';
 }
 function getColor(country) {
-  return _getColor(getCountryMaleFreq(country));
+  var country_stats = countries_stats[country]
+  var d = country_stats ? country_stats.male_frac : -1;
+  return _getColor(d);
 }
 
 function style(feature) {
@@ -70,7 +105,7 @@ function highlightFeature(e) {
 
         layer.setStyle({
                 weight: 4,
-                color: '#666',
+                color: '#2b2b2b',
                 fillOpacity: 0.7
         });
 
@@ -79,8 +114,7 @@ function highlightFeature(e) {
         }
 
         var name = layer.feature.properties.ADMIN;
-        var male_freq = getCountryMaleFreq(name);
-        info.update({name, male_freq});
+        info.update(name, countries_stats[name]);
 }
 
 var geojson;
@@ -115,7 +149,7 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
 
         var div = L.DomUtil.create('div', 'info legend');
-        var grades = [1, 30, 40, 50, 60, 70, 80, 90];
+        var grades = [1, 40, 50, 60, 70, 80, 90, 99];
         var labels = [];
         var from, to;
 
@@ -124,7 +158,7 @@ legend.onAdd = function (map) {
                 to = grades[i + 1];
 
                 labels.push(
-                        '<i style="background:' + _getColor(from + 1) + '"></i> ' +
+                        '<i style="background:' + _getColor(from + 0.1) + '"></i> ' +
                         from + (to ? '&ndash;' + to : '+'));
         }
 

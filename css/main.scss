@@ -16,6 +16,16 @@ $content_width: 900px;
   }
 }
 
+.country-stats {
+  min-width: 360px;
+
+  table {
+    margin: 0;
+  }
+  span {
+    font-weight: bold;
+  }
+}
 
 .wrapper {
     max-width: 100%;

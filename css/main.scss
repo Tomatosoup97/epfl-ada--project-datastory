@@ -6,7 +6,7 @@ $content_width: 900px;
 @font-face {font-family: "SupriaSansW01-Light"; src: url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.eot"); src: url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.woff") format("woff"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.svg#SupriaSansW01-Light") format("svg"); }
 
 #map {
-  height: 800px;
+  height: 750px;
 }
 .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
 .legend {

@@ -22,27 +22,37 @@ layout: default
 
 {% include plots/freq_speakers_country_dev_gender.html %}
 
-<img src="img/plots/frac_speakers_country_dev_gender.png">
-
 {% include plots/dist_quotes_gender_hdi_years.html %}
 
 {% include plots/freq_speakers_class_occup_gender_year.html %}
 
 {% include plots/freq_speakers_class_occup_gender_hdi.html %}
 
-<img src="img/plots/freq_speakers_class_occup_gender.png">
+{% comment %}
+{% include plots/freq_speakers_class_occup_gender.html %}
+{% endcomment %}
 
 <img src="img/plots/freq_speakers_class_occup_hdi_gender.png">
+
+{% comment %}
+{% include plots/prop_females_media_years.html %}
+{% endcomment %}
 
 <img src="img/plots/hypertuning_topics.png">
 
 <img src="img/plots/hypertuning_params.png">
 
-<img src="img/plots/topics_horizontal_bar.png">
+{% comment %}
+{% include plots/topics_horizontal_bar.html %}
+{% endcomment %}
 
+{% include plots/topics_dist_piechart.html %}
 
 <img src="img/plots/topics_cloud.png">
 
+{% comment %}
+{% include plots/topics_distance_map.html %}
+{% endcomment %}
 
 <img src="img/plots/num_occur_gender_quotes.png">
 
@@ -50,3 +60,4 @@ layout: default
 
 <!-- <img src="img/plots/heatmap_class_occup_gender.png"> -->
 
+</div>

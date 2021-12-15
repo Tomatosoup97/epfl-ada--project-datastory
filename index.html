@@ -15,7 +15,17 @@ layout: default
   </h2>
 </div>
 
+
 <div class="content">
+  <span class="counter">1,234,567</span>
+  <p>quotes</p>
+
+  <span class="counter">2.9</span>
+  <p>CHF for Cappuccino in SV</p>
+
+  <span class="counter">2.5</span>
+  <p>CHF for a brownie</p>
+
   <h2>Percentage of male-speaker quotations across the world</h2>
 </div>
 
@@ -70,14 +80,32 @@ layout: default
 </div>
 
 
+<!-- leaflet css -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
       type="text/css">
 
+<!-- leaflet js -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 <script src="https://unpkg.com/leaflet-gesture-handling"></script>
 
+<!-- counter -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
 
+<!-- local -->
 <script src="js/countries.js"></script>
 <script src="js/countries_stats.js"></script>
 <script src="js/map.js"></script>
+
+<script>
+  $( document ).ready(function() {
+
+      $('.counter').counterUp({
+          delay: 10,
+          time: 1500
+      });
+  });
+</script>
+

@@ -4,60 +4,76 @@ layout: default
 <link rel="stylesheet" href="css/main.css">
 <link href="//db.onlinewebfonts.com/c/dd437b25e5a1128bd4066f087c694c88?family=SupriaSansW01-Light" rel="stylesheet" type="text/css"/>
 
+
+<div class="content">
+  <img class="main-img" src="img/woman-ineq.jpeg">
+  <h2 class="quote">
+    <i>
+      “No country can every truly flourish if it stifles the potential of its women and deprives itself of the contribution of half its citizens” <br/>
+      ~ Michelle Obama
+    </i>
+  </h2>
+</div>
+
+<div id='map'></div>
+
 <div class="content">
 
-<img class="main-img" src="img/woman-ineq.jpeg">
+  {% include plots/freq_speakers_country.html %}
 
-<h2 class="quote">
-    <i>
-        “No country can every truly flourish if it stifles the potential of its women and deprives itself of the contribution of half its citizens” <br/>
-        ~ Michelle Obama
-    </i>
-</h2>
+  <img src="img/plots/frac_speakers_country_gender.png">
 
+  {% include plots/freq_speakers_country_dev_gender.html %}
 
-{% include plots/freq_speakers_country.html %}
+  {% include plots/dist_quotes_gender_hdi_years.html %}
 
-<img src="img/plots/frac_speakers_country_gender.png">
+  {% include plots/freq_speakers_class_occup_gender_year.html %}
 
-{% include plots/freq_speakers_country_dev_gender.html %}
+  {% include plots/freq_speakers_class_occup_gender_hdi.html %}
 
-{% include plots/dist_quotes_gender_hdi_years.html %}
+  {% comment %}
+  {% include plots/freq_speakers_class_occup_gender.html %}
+  {% endcomment %}
 
-{% include plots/freq_speakers_class_occup_gender_year.html %}
+  <img src="img/plots/freq_speakers_class_occup_hdi_gender.png">
 
-{% include plots/freq_speakers_class_occup_gender_hdi.html %}
+  {% comment %}
+  {% include plots/prop_females_media_years.html %}
+  {% endcomment %}
 
-{% comment %}
-{% include plots/freq_speakers_class_occup_gender.html %}
-{% endcomment %}
+  <img src="img/plots/hypertuning_topics.png">
 
-<img src="img/plots/freq_speakers_class_occup_hdi_gender.png">
+  <img src="img/plots/hypertuning_params.png">
 
-{% comment %}
-{% include plots/prop_females_media_years.html %}
-{% endcomment %}
+  {% comment %}
+  {% include plots/topics_horizontal_bar.html %}
+  {% endcomment %}
 
-<img src="img/plots/hypertuning_topics.png">
+  {% include plots/topics_dist_piechart.html %}
 
-<img src="img/plots/hypertuning_params.png">
+  <img src="img/plots/topics_cloud.png">
 
-{% comment %}
-{% include plots/topics_horizontal_bar.html %}
-{% endcomment %}
+  {% comment %}
+  {% include plots/topics_distance_map.html %}
+  {% endcomment %}
 
-{% include plots/topics_dist_piechart.html %}
+  <img src="img/plots/num_occur_gender_quotes.png">
 
-<img src="img/plots/topics_cloud.png">
+  <img src="img/plots/success_quotes_woman_development.png">
 
-{% comment %}
-{% include plots/topics_distance_map.html %}
-{% endcomment %}
-
-<img src="img/plots/num_occur_gender_quotes.png">
-
-<img src="img/plots/success_quotes_woman_development.png">
-
-<!-- <img src="img/plots/heatmap_class_occup_gender.png"> -->
+  <!-- <img src="img/plots/heatmap_class_occup_gender.png"> -->
 
 </div>
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
+      type="text/css">
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet-gesture-handling"></script>
+
+
+<script src="js/countries.js"></script>
+<script src="js/quotes_fractions.js"></script>
+<script src="js/map.js"></script>

@@ -1,0 +1,31 @@
+---
+---
+
+$content_width: 900px;
+
+@font-face {font-family: "SupriaSansW01-Light"; src: url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.eot"); src: url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.woff") format("woff"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.svg#SupriaSansW01-Light") format("svg"); }
+
+
+.wrapper {
+    max-width: 100%;
+    font-family: "SupriaSansW01-Light", sans-serif, Arial;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.site-header {
+    .wrapper {
+        max-width: $content_width;
+    }
+}
+.content {
+    max-width: $content_width;
+    margin: auto;
+}
+.quote {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+    margin: 1em 0;
+}
+.main-img {
+}

@@ -21,7 +21,11 @@ info.onAdd = function (map) {
 
 info.update = function (name, stats) {
   if (!name) {
-    this._div.innerHTML = 'Hover over a state to display data';
+    this._div.innerHTML = `
+      <div class="country-stats">
+        <p>Hover over a country to display data</p>
+      </div>
+    `;
     return;
   }
   if (!stats) {

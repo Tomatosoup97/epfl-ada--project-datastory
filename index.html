@@ -7,69 +7,131 @@ layout: default
 
 <div class="content">
   <img class="main-img" src="img/woman-ineq.jpeg">
-  <h2 class="quote">
-    <i>
-      “No country can every truly flourish if it stifles the potential of its women and deprives itself of the contribution of half its citizens” <br/>
-      ~ Michelle Obama
-    </i>
-  </h2>
+  <div class="quote">
+    <h2 class="quote__content">
+      <i>
+        “No country can ever truly flourish if it stifles the potential of its women and deprives itself of the contribution of half its citizens” <br/>
+        ~ Michelle Obama
+      </i>
+    </h2>
+  </div>
+
+  <p>
+    TODO: Describe generally what's going on here
+  </p>
+
+  <p>
+    TODO: put somewhere correlation analyses results
+  </p>
 </div>
 
 
 <div class="content">
-  <span class="counter">1,234,567</span>
-  <p>quotes</p>
+  <p>TODO: display horizontally</p>
+  <div>
+    <div class="counter-box">
+      <span class="counter">3,693,202</span>
+      <p>considered<br>quotes</p>
+    </div>
 
-  <span class="counter">2.9</span>
-  <p>CHF for Cappuccino in SV</p>
+    <div class="counter-box">
+      <span class="counter">7682</span>
+      <p>from woman<br>playing cricket</p>
+    </div>
 
-  <span class="counter">2.5</span>
-  <p>CHF for a brownie</p>
-
-  <h2>Percentage of male-speaker quotations across the world</h2>
+    <div class="counter-box">
+      <span class="counter">20535</span>
+      <p>citations of female epidemiologist</p>
+    </div>
+  </div>
 </div>
-
-<div id='map'></div>
 
 <div class="content">
 
-  {% include plots/freq_speakers_country.html %}
+  <section class="section-header">
+    <h2>
+      Where do highly quoted women work?
+    </h2>
+    <h3>
+      Comparison of male and female occupations in the media
+    </h3>
 
-  <img src="img/plots/frac_speakers_country_gender.png">
+    <p>TODO: put here content from the notebook
 
-  {% include plots/freq_speakers_country_dev_gender.html %}
+  </section>
 
-  {% include plots/dist_quotes_gender_hdi_years.html %}
-
-  {% include plots/freq_speakers_class_occup_gender_year.html %}
-
-  {% include plots/freq_speakers_class_occup_gender_hdi.html %}
-
-  {% comment %}
   {% include plots/freq_speakers_class_occup_gender.html %}
-  {% endcomment %}
 
-  <img src="img/plots/freq_speakers_class_occup_hdi_gender.png">
+  <section class="section-header">
+    <h2>Men talk about sport, women about family and health</h2>
+    <h3>Detecting what are the topics of quotes and how is it distrubuted based on gender</h3>
+  </section>
 
-  {% comment %}
-  {% include plots/prop_females_media_years.html %}
-  {% endcomment %}
+  <div class="img-text">
+    <h3 class="img-text__text">Women are smth less sport smth male</h3>
+    <img src="img/woman-sport.jpg">
+  </div>
 
-  <img src="img/plots/hypertuning_topics.png">
-
-  <img src="img/plots/hypertuning_params.png">
-
-  {% comment %}
   {% include plots/topics_horizontal_bar.html %}
-  {% endcomment %}
 
+  <p>TODO: describe which topics are most common (take from notebook)</p>
+
+</div>
+
+<div class="wide-content">
   {% include plots/topics_dist_piechart.html %}
 
-  <img src="img/plots/topics_cloud.png">
+  <p>TODO: which topics are male or female dominated (notebook)</p>
+</div>
 
-  {% comment %}
-  {% include plots/topics_distance_map.html %}
-  {% endcomment %}
+<div class="content">
+
+  <section class="section-header">
+    <h2>Representation of women in developing countries</h2>
+    <h3>Putting numbers across the world based on human development index of countries</h3>
+  </section>
+
+
+  <p>TODO: Woman are underrepresented in developing countries (notebook)</p>
+</div>
+
+<div class="wide-content">
+  {% include plots/dist_quotes_gender_hdi_years.html %}
+</div>
+
+<div class="content">
+  <div class="img-text">
+    <h3 class="img-text__text img-text__text--wide">
+      Women are absent in science, business and politics in low-development countries
+    </h3>
+    <img src="img/woman-quotation-mark.jpg">
+  </div>
+</div>
+
+<div class="content">
+  <img src="img/plots/freq_speakers_class_occup_hdi_gender.png">
+
+  <h3>Fraction of male quotes across the world</h3>
+</div>
+
+<div id="map"></div>
+
+<div class="content">
+  <p>TODO: short comment what surprised us, and that for some of the countries we don't have enough data</p>
+  <p>TODO: adjust scales</p>
+
+  <section class="section-header">
+    <h2>How are the previously discussed features affecting the success of a quote?</h2>
+    <h3>Using linear regression model to observe the impact of
+      speakers' gender, occupation and quotes' topic on the number of citations</h3>
+  </section>
+
+  <p>TODO: discuss coefficients</p>
+  <p>TODO: update images</p>
+
+  <p>TODO Question 1: 1. _Are women-attributed quotes less successful than men-attributed quotes?_</p>
+
+  <p>TODO Question 2: 1. Are quotes attributed to women from developing countries less successful than those attributed to women from developed countries?</p>
 
   <img src="img/plots/num_occur_gender_quotes.png">
 
@@ -77,27 +139,16 @@ layout: default
 
   <!-- <img src="img/plots/heatmap_class_occup_gender.png"> -->
 
+  <h2>TODO: In the 21st century, woman are still highly under-represented</h2>
+
+  <p>TODO: some concluding words</p>
+
 </div>
-
-
-<!-- leaflet css -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-<link rel="stylesheet" href="https://unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
-      type="text/css">
-
-<!-- leaflet js -->
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-<script src="https://unpkg.com/leaflet-gesture-handling"></script>
 
 <!-- counter -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="js/jquery.waypoints.min.js"></script>
 <script src="js/jquery.counterup.min.js"></script>
-
-<!-- local -->
-<script src="js/countries.js"></script>
-<script src="js/countries_stats.js"></script>
-<script src="js/map.js"></script>
 
 <script>
   $( document ).ready(function() {
@@ -108,4 +159,19 @@ layout: default
       });
   });
 </script>
+
+<!-- leaflet css -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
+      type="text/css">
+
+<!-- leaflet js -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet-gesture-handling"></script>
+
+<!-- local -->
+<script src="js/countries.js"></script>
+<script src="js/countries_stats.js"></script>
+<script src="js/map.js"></script>
+<script src="js/topics_distance.js"></script>
 

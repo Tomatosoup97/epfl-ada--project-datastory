@@ -3,7 +3,7 @@
 
 $content_width: 1024px;
 $medium-content_width: 1200px;
-$wide-content_width: 85%;
+$wide-content_width: 1200px;
 // $grey: #F8F8F8;
 $grey: #F2F2F2;
 
@@ -161,7 +161,6 @@ body, html {
       left: 0;
       right: 60%;
       text-align: left;
-      padding-left: 1em;
     }
   }
 }
@@ -182,3 +181,9 @@ body, html {
 .page-content {
   padding-top: 0;
 }
+
+.main-box {
+  background-color: #f7e5cd;
+  border-bottom: 2px solid #434343;
+}
+

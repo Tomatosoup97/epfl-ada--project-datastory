@@ -1,12 +1,18 @@
 ---
 layout: default
 ---
+
 <link rel="stylesheet" href="css/main.css">
 <link href="//db.onlinewebfonts.com/c/dd437b25e5a1128bd4066f087c694c88?family=SupriaSansW01-Light" rel="stylesheet" type="text/css"/>
 
 
 <div class="content">
-  <img class="main-img" src="img/woman-ineq.jpeg">
+    <div class="img-text">
+      <h1 class="img-text__text img-text__text--left img-text__text--wide">
+        This is a <br>Man's word
+      </h1>
+      <img class="main-img" src="img/woman-ineq.jpeg">
+    </div>
 </div>
 
 <div class="full-content highlight-box">
@@ -76,20 +82,22 @@ layout: default
   </section>
 </div>
 
-<div class="full-content highlight-box">
-  <div class="content">
-    <div class="img-text">
-      <h3 class="img-text__text">Women are smth less sport smth male</h3>
-      <img src="img/woman-sport.jpg">
-    </div>
-  </div>
-</div>
-
 <div class="content">
 
   {% include plots/topics_horizontal_bar.html %}
   <p>TODO: describe which topics are most common (take from notebook)</p>
 
+</div>
+
+<div class="full-content highlight-box">
+  <div class="content">
+    <div class="img-text">
+      <h3 class="img-text__text img-text__text--sport">
+        Men talk about sport two times more often than women
+      </h3>
+      <img src="img/woman-sport.jpg">
+    </div>
+  </div>
 </div>
 
 <div class="wide-content">
@@ -116,8 +124,8 @@ layout: default
 <div class="full-content highlight-box">
   <div class="medium-content">
     <div class="img-text">
-      <h3 class="img-text__text img-text__text--left img-text__text--wide">
-        Women are absent in science, business and politics in low-development countries
+      <h3 class="img-text__text img-text__text--left-center img-text__text--wide">
+        Women are absent in <br>science, business and politics in <br>low-development countries
       </h3>
       <img src="img/woman-interview.jpg">
     </div>

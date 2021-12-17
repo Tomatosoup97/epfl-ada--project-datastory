@@ -75,7 +75,7 @@ body, html {
 }
 
 .highlight-box {
-  margin: 1em 0;
+  margin: 1.5em 0;
   background: $grey;
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -128,6 +128,11 @@ body, html {
 
 .section-header {
   text-align: center;
+  padding: 2.5em;
+
+  h2 {
+    margin-bottom: 3px;
+  }
 }
 
 .img-text {
@@ -140,13 +145,23 @@ body, html {
     top: 0.7em;
     left: 25%;
 
+    &.img-text__text--sport {
+      left: 20%;
+      width: 60%;
+    }
     &.img-text__text--wide {
       left: 15%;
       right: 15%;
     }
+    &.img-text__text--left-center {
+      left: 0;
+      right: 60%;
+    }
     &.img-text__text--left {
       left: 0;
       right: 60%;
+      text-align: left;
+      padding-left: 1em;
     }
   }
 }
@@ -160,4 +175,10 @@ body, html {
   .counter {
     font-weight: bold;
   }
+}
+.site-header {
+  min-height: 0;
+}
+.page-content {
+  padding-top: 0;
 }

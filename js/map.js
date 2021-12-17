@@ -76,17 +76,27 @@ info.addTo(map);
 
 
 // get color depending on fraction of males
-// TODO: change colors
 function _getColor(d) {
-  return d > 99 ? '#800026' :
-          d > 90  ? '#BD0026' :
-          d > 80  ? '#E31A1C' :
-          d > 70  ? '#FC4E2A' :
-          d > 60   ? '#FD8D3C' :
-          d > 50   ? '#FEB24C' :
-          d > 40   ? '#FED976' :
-          d >= 0  ? '#FFEDA0' :
-                      '#FFFFFF';
+
+  return  d > 99 ? '#03045e' :
+          d > 95  ? '#023e8a' :
+          d > 90  ? '#0077b6' :
+          d > 80  ? '#0096c7' :
+          d > 70  ? '#00b4d8' :
+          d > 60   ? '#48cae4' :
+          d > 55   ? '#90e0ef' :
+          d > 50   ? '#ade8f4' :
+
+          d > 45   ? '#F7CAD0' :
+          d > 40   ? '#F9BEC7' :
+          d > 35   ? '#FBB1BD' :
+          d > 30   ? '#FF99AC' :
+          d > 25   ? '#FF85A1' :
+          d > 20   ? '#ff7096' :
+          d > 15   ? '#ff5c8a' :
+          d > 10   ? '#ff477e' :
+          d >= 0  ? '#ff0a54' :
+                    '#ced4da';
 }
 function getColor(country) {
   var country_stats = countries_stats[country]
@@ -153,7 +163,7 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
 
         var div = L.DomUtil.create('div', 'info legend');
-        var grades = [1, 40, 50, 60, 70, 80, 90, 99];
+        var grades = [0, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 70, 80, 90, 95, 99];
         var labels = [];
         var from, to;
 
@@ -165,6 +175,7 @@ legend.onAdd = function (map) {
                         '<i style="background:' + _getColor(from + 0.1) + '"></i> ' +
                         from + (to ? '&ndash;' + to : '+'));
         }
+        labels.push('<i style="background: #ced4da"></i> no data');
 
         div.innerHTML = labels.join('<br>');
         return div;

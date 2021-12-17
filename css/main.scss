@@ -133,6 +133,9 @@ body, html {
   .section-header__main {
     margin-bottom: 3px;
   }
+  &.section-header--no-bottom-pad {
+    padding-bottom: 0.5em;
+  }
 }
 
 .img-text {

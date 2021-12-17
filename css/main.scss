@@ -2,10 +2,18 @@
 ---
 
 $content_width: 1024px;
+$medium-content_width: 1200px;
 $wide-content_width: 85%;
-$grey: #F8F8F8;
+// $grey: #F8F8F8;
+$grey: #F2F2F2;
+
+$background: #f8fafa;
 
 @font-face {font-family: "SupriaSansW01-Light"; src: url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.eot"); src: url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.woff") format("woff"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.svg#SupriaSansW01-Light") format("svg"); }
+
+body, html {
+  background-color: #ffffff;
+}
 
 #map {
   height: 850px;
@@ -45,22 +53,32 @@ $grey: #F8F8F8;
     max-width: $content_width;
     margin: auto;
 }
+.full-content {
+    max-width: 100%;
+    margin: auto;
+}
+.medium-content {
+    max-width: $medium-content_width;
+    margin: auto;
+}
 .wide-content {
     max-width: $wide-content_width;
     margin: auto;
 }
 .quote {
-    // font-size: 36px;
     text-align: center;
     width: 100%;
 
     .quote__content {
-      margin: 1em 0;
       padding: 1em;
-      background: #f8f8f8;
-      border-top: 1px solid;
-      border-bottom: 1px solid;
     }
+}
+
+.highlight-box {
+  margin: 1em 0;
+  background: $grey;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
 }
 
 .main-img {
@@ -125,6 +143,10 @@ $grey: #F8F8F8;
     &.img-text__text--wide {
       left: 15%;
       right: 15%;
+    }
+    &.img-text__text--left {
+      left: 0;
+      right: 60%;
     }
   }
 }

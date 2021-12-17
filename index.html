@@ -7,14 +7,22 @@ layout: default
 
 <div class="content">
   <img class="main-img" src="img/woman-ineq.jpeg">
-  <div class="quote">
-    <h2 class="quote__content">
-      <i>
-        “No country can ever truly flourish if it stifles the potential of its women and deprives itself of the contribution of half its citizens” <br/>
-        ~ Michelle Obama
-      </i>
-    </h2>
+</div>
+
+<div class="full-content highlight-box">
+  <div class="content">
+    <div class="quote">
+      <h2 class="quote__content">
+        <i>
+          “No country can ever truly flourish if it stifles the potential of its women and deprives itself of the contribution of half its citizens” <br/>
+          ~ Michelle Obama
+        </i>
+      </h2>
+    </div>
   </div>
+</div>
+
+<div class="content">
 
   <p>
     TODO: Describe generally what's going on here
@@ -66,14 +74,20 @@ layout: default
     <h2>Men talk about sport, women about family and health</h2>
     <h3>Detecting what are the topics of quotes and how is it distrubuted based on gender</h3>
   </section>
+</div>
 
-  <div class="img-text">
-    <h3 class="img-text__text">Women are smth less sport smth male</h3>
-    <img src="img/woman-sport.jpg">
+<div class="full-content highlight-box">
+  <div class="content">
+    <div class="img-text">
+      <h3 class="img-text__text">Women are smth less sport smth male</h3>
+      <img src="img/woman-sport.jpg">
+    </div>
   </div>
+</div>
+
+<div class="content">
 
   {% include plots/topics_horizontal_bar.html %}
-
   <p>TODO: describe which topics are most common (take from notebook)</p>
 
 </div>
@@ -99,12 +113,14 @@ layout: default
   {% include plots/dist_quotes_gender_hdi_years.html %}
 </div>
 
-<div class="content">
-  <div class="img-text">
-    <h3 class="img-text__text img-text__text--wide">
-      Women are absent in science, business and politics in low-development countries
-    </h3>
-    <img src="img/woman-quotation-mark.jpg">
+<div class="full-content highlight-box">
+  <div class="medium-content">
+    <div class="img-text">
+      <h3 class="img-text__text img-text__text--left img-text__text--wide">
+        Women are absent in science, business and politics in low-development countries
+      </h3>
+      <img src="img/woman-interview.jpg">
+    </div>
   </div>
 </div>
 
@@ -135,9 +151,7 @@ layout: default
 
   <img src="img/plots/num_occur_gender_quotes.png">
 
-  <img src="img/plots/success_quotes_woman_development.png">
-
-  <!-- <img src="img/plots/heatmap_class_occup_gender.png"> -->
+  <img src="img/plots/success_quote_woman_country_dev.png">
 
   <h2>TODO: In the 21st century, woman are still highly under-represented</h2>
 

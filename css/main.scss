@@ -7,12 +7,20 @@ $wide-content_width: 1200px;
 // $grey: #F8F8F8;
 $grey: #F2F2F2;
 
+$blue: #1E88E5;
+$pink: #FFB6C1;
+$dark_pink: #ff6b81;
+$dark_blue: #0e81e6;
+
 $background: #f8fafa;
 
 @font-face {font-family: "SupriaSansW01-Light"; src: url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.eot"); src: url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.woff") format("woff"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dd437b25e5a1128bd4066f087c694c88.svg#SupriaSansW01-Light") format("svg"); }
 
 body, html {
   background-color: #ffffff;
+}
+p {
+  text-align: justify;
 }
 
 #map {
@@ -149,8 +157,8 @@ body, html {
     left: 25%;
 
     &.img-text__text--sport {
-      left: 20%;
-      width: 60%;
+      left: 15%;
+      width: 70%;
     }
     &.img-text__text--wide {
       left: 15%;
@@ -168,6 +176,22 @@ body, html {
   }
 }
 
+.points {
+  .points__elem {
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    font-size: 1em;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}
 
 .counter-box {
   display: inline-block;
@@ -177,6 +201,10 @@ body, html {
 
   .counter {
     font-weight: bold;
+  }
+
+  p {
+    text-align: center;
   }
 }
 .site-header {
@@ -191,5 +219,14 @@ body, html {
   border-bottom: 2px solid #434343;
 }
 .padded {
-  margin: 3em auto;
+  margin: 2em auto;
+}
+.woman-text {
+  color: $dark_pink;
+  font-weight: 600;
+}
+
+.man-text {
+  color: $dark_blue;
+  font-weight: 600;
 }

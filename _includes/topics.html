@@ -8,25 +8,41 @@
 </div>
 
 <div class="content">
+  <p>
+  The Global Media Monitoring Project (GMMP) reports that throughout the world, <span class="woman-text">women</span> are more likely to be mentioned in the context of ‘soft’ subjects such as <span class="woman-text">family, lifestyle, fashion and arts</span>, whereas <span class="man-text">men</span> speakers cover ‘hard’ topics about <span class="man-text">politics and economy</span>.
+  </p>
+
+  <p>
+  In order to verify and quantify these differences, we trained a machine learning model, which takes as input the keywords from each quote and extracts the main topics from the whole dataset. Below, you can see that some of the learnt topics are more “human” interpretable than others, as the words representative of them have a strong semantic connection. <b>The top two most common topics are, not surprisingly, about sport and politics</b> and appear in approximately 800k quotes.
+  </p>
 
   {% include plots/topics_horizontal_bar.html %}
-  <p>TODO: describe which topics are most common (take from notebook)</p>
+</div>
 
+<div class="wide-content">
+  {% include plots/topics_dist_piechart.html %}
+</div>
+
+<div class="content padded">
+  <p>
+    By looking at the pie charts, we can see that most of the topics are uniformly distributed across the two gender groups. Two differences can be observed: men talk mostly about sports and politics, while women express themselves especially about social issues, family and, surprisingly, politics too.
+  </p>
 </div>
 
 <div class="full-content highlight-box">
   <div class="content">
     <div class="img-text">
       <h3 class="img-text__text img-text__text--sport">
-        Men talk about sport twice more often than women
+        Men are twice more likely to talk about sport than women
       </h3>
       <img src="img/woman-sport.jpg">
     </div>
   </div>
 </div>
 
-<div class="wide-content">
-  {% include plots/topics_dist_piechart.html %}
 
-  <p>TODO: which topics are male or female dominated (notebook)</p>
+<div class="content">
+  <p>
+  Sport is mainly viewed through a male lens because for decades it has been aimed at audiences mostly comprised of men, and stories surrounding the female sporting experience have too often been under-appreciated. In addition to the limited coverage of women in this field, media tends to represent women athletes as <span class="woman-text">women first and athletes second with multiple references to appearances, age or family life</span>. Instead, <span class="man-text">men are depicted as powerful, independent, dominating and valued as athletes</span> (cite unesco). This unbalanced gender portrayal is widespread and can negatively influence perceptions in terms of what society may expect from men and women.
+  </p>
 </div>

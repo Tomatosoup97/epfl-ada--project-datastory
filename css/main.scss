@@ -230,3 +230,18 @@ p {
   color: $dark_blue;
   font-weight: 600;
 }
+.clouds {
+  position: relative;
+  height: 200px;
+
+  img {
+    position: absolute;
+    width: 400px;
+  }
+  .clouds__left {
+    left: 0;
+  }
+  .clouds__right {
+    right: 0;
+  }
+}

@@ -40,7 +40,7 @@ body, html {
 .wrapper {
     max-width: 100%;
     font-family: "SupriaSansW01-Light", sans-serif, Arial;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 300;
     padding: 0;
 }
@@ -54,16 +54,15 @@ body, html {
     margin: auto;
 }
 .full-content {
+    @extend .content;
     max-width: 100%;
-    margin: auto;
 }
 .medium-content {
+    @extend .content;
     max-width: $medium-content_width;
-    margin: auto;
 }
 .wide-content {
     max-width: $wide-content_width;
-    margin: auto;
 }
 .quote {
     text-align: center;
@@ -130,7 +129,7 @@ body, html {
   text-align: center;
   padding: 2.5em;
 
-  h2 {
+  .section-header__main {
     margin-bottom: 3px;
   }
 }
@@ -170,6 +169,7 @@ body, html {
   display: inline-block;
   width: 300px;
   text-align: center;
+  font-size: 1.3em;
 
   .counter {
     font-weight: bold;
@@ -186,4 +186,6 @@ body, html {
   background-color: #f7e5cd;
   border-bottom: 2px solid #434343;
 }
-
+.padded {
+  margin: 3em auto;
+}

@@ -19,8 +19,8 @@ layout: default
 
 <div class="content">
   <section class="section-header">
-    <h1>
-      Is gender inequality still a thing in the 21st century?
+    <h1 class="section-header__main">
+      <b>Is gender inequality still a thing in the 21st century?</b>
     </h1>
   </section>
 </div>
@@ -28,16 +28,26 @@ layout: default
 <div class="content">
 
   <p>
-    TODO: Describe generally what's going on here
+    Women have been fighting for centuries to gain a full and equal participation in society, claiming it as a fundamental human right. Fair gender portrayal in the media should be considered a professional and ethical aspiration, similar to respect for accuracy, fairness and honesty. 
+    Yet, <b>in 2021 all around the world women are still severely under-represented in the media</b> compared to men, even in  socially progressive countries. According to a study by the University of Zurich (cite…), <b>only one out of four people featured in the media reports is female</b>. In the last few years there seems to be a raising awareness of this problem, promoted for example by the 50:50 The Equality Project launched by BBC, however gender equality is still far from being conquered. 
   </p>
 
   <p>
-    TODO: put somewhere correlation analyses results
-  </p>
+  Our project goal is to provide a clear overview of the problem in order to answer the following question: <b>“How far are we standing from an equal representation of genders in the media?”</b>
+    For this purpose, we analyzed the Quotebank dataset: a rich collection of quotes and attributed speakers published in the English News between 2015 and 2020. Additional information was retrieved about the speaker’s gender, nationality and occupation from the Wikidata. Furthermore, the Human Development dataset allowed to classify the speakers’ countries of origin from ‘Very High’ to ‘Low’ based on economic and sociocultural factors.
+</p>
+
 </div>
 
-
 <div class="content">
+  <section class="section-header">
+    <h2 class="section-header__main">
+      Putting some light on the numbers
+    </h2>
+  </section>
+</div>
+
+<div class="content padded">
   <div>
     <div class="counter-box">
       <span class="counter">3,693,202</span>
@@ -72,7 +82,7 @@ layout: default
 <div class="content">
 
   <section class="section-header">
-    <h2>
+    <h2 class="section-header__main">
       Where do highly quoted women work?
     </h2>
     <h3>
@@ -86,7 +96,9 @@ layout: default
   {% include plots/freq_speakers_class_occup_gender.html %}
 
   <section class="section-header">
-    <h2>Men talk about sport, women about family and health</h2>
+    <h2 class="section-header__main">
+      Men talk about sport, women about family and health
+    </h2>
     <h3>Detecting what are the topics of quotes and how is it distrubuted based on gender</h3>
   </section>
 </div>
@@ -118,7 +130,9 @@ layout: default
 <div class="content">
 
   <section class="section-header">
-    <h2>Representation of women in developing countries</h2>
+    <h2 class="section-header__main">
+      Representation of women in developing countries
+    </h2>
     <h3>Putting numbers across the world based on human development index of countries</h3>
   </section>
 
@@ -154,7 +168,9 @@ layout: default
   <p>TODO: adjust scales</p>
 
   <section class="section-header">
-    <h2>How are the previously discussed features affecting the success of a quote?</h2>
+    <h2 class="section-header__main">
+      How are the previously discussed features affecting the success of a quote?
+    </h2>
     <h3>Using linear regression model to observe the impact of
       speakers' gender, occupation and quotes' topic on the number of citations</h3>
   </section>
@@ -174,6 +190,9 @@ layout: default
 
   <p>TODO: some concluding words</p>
 
+  <p>
+    TODO: put somewhere correlation analyses results
+  </p>
 </div>
 
 <!-- counter -->
